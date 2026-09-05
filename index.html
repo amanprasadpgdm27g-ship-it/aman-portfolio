@@ -1,0 +1,1078 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Prasad Laheri | Portfolio & Strategic Finance</title>
+  <meta name="description" content="Portfolio of Aman Prasad Laheri - Detail-oriented Finance Professional, GLIM Gurgaon PGDM '27, Risk Assessment, Valuation, and Fintech Innovator.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+</head>
+<body>
+
+  <!-- FIXED TOP NAVIGATION HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" onclick="switchView('home'); return false;" class="brand-logo">
+        <div class="brand-icon">A</div>
+        <span>Aman P. Laheri</span>
+      </a>
+
+      <!-- Two Primary Portals -->
+      <nav class="nav-portals">
+        <button class="nav-portal-btn" data-portal="journey" onclick="switchView('journey')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 12 8"></polygon><line x1="16" y1="12" x2="12" y2="12"></line></svg>
+          <span>My Journey</span>
+        </button>
+
+        <button class="nav-portal-btn" data-portal="explore" onclick="switchView('explore')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <span>Explore with Aman</span>
+        </button>
+      </nav>
+
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <!-- Bluish Theme Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Switch Theme"></button>
+        
+        <!-- Contact CTA Button -->
+        <button class="btn-contact-header" onclick="openContactModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Contact</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP VIEWPORT -->
+  <main class="app-viewport">
+
+    <!-- VIEW 1: HOME SCREEN (16:9 Blurred Photo Backdrop + "Hello" in Italics) -->
+    <section id="view-home" class="view-section active">
+      <div class="hero-wrapper">
+        
+        <!-- 16:9 Aspect Ratio Frame Container -->
+        <div class="hero-16-9-frame" id="heroFrame">
+          
+          <!-- Background Image (Aman_home.jpg) blurred by default -->
+          <img src="Aman_home.jpg" alt="Aman Background Photo" class="hero-backdrop-img" id="heroBackdropImg" onerror="this.src='assets/Aman_home.jpg';">
+          
+          <!-- Bluish Frosted Glass Tint Overlay -->
+          <div class="hero-overlay-tint"></div>
+
+          <!-- Interactive Controls for Photo & Blur -->
+          <div class="hero-controls">
+            <button class="hero-control-pill" id="toggleBlurBtn" title="Toggle background blur effect">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+              Focus / Unblur
+            </button>
+            <button class="hero-control-pill" id="changePhotoBtn" title="Upload or choose your own photo">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              Change Photo
+            </button>
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+          </div>
+
+          <!-- Hero Content Layer -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); display: inline-block;"></span>
+              Great Lakes Institute of Management, Gurgaon · PGDM '27
+            </div>
+
+            <!-- "Hello" in Italics as explicitly requested -->
+            <div class="hero-hello-italic">Hello</div>
+
+            <h1 class="hero-name">I'm Aman Prasad Laheri</h1>
+
+            <p class="hero-tagline">
+              Detail-oriented finance professional with hands-on experience in internal audit, 
+              business process evaluation, financial analysis, and risk assessment. Proven ability 
+              to analyze complex transaction datasets and deliver meaningful business insights.
+            </p>
+          </div>
+        </div>
+
+        <!-- Two Main Modules Launch Cards -->
+        <div class="hero-portals">
+          <!-- Card 1: My Journey -->
+          <div class="portal-card" onclick="switchView('journey')" style="cursor: pointer;">
+            <div>
+              <div class="portal-header">
+                <div class="portal-icon-box">🧭</div>
+                <div>
+                  <h2 class="portal-title">My Journey</h2>
+                  <div style="font-size: 0.82rem; color: var(--text-accent); font-weight: 600;">Personal Narrative & Milestones</div>
+                </div>
+              </div>
+              <p class="portal-desc" style="margin-top: 1rem;">
+                Step into the evolution of my professional mindset — who I am, what I did, learnings from mistakes, 
+                Karma Yoga at Rotaract, leadership during Placecom, and why <em>"अब्बा नहीं मानेंगे"</em> makes every ambition sweeter.
+              </p>
+              <div class="portal-submodules-preview">
+                <span class="submodule-chip">Who am I?</span>
+                <span class="submodule-chip">What I did?</span>
+                <span class="submodule-chip">What I achieved?</span>
+                <span class="submodule-chip">Spices of Life</span>
+                <span class="submodule-chip">Fun Philosophy</span>
+                <span class="submodule-chip">अब्बा नहीं मानेंगे</span>
+              </div>
+            </div>
+            <button class="portal-cta-btn">
+              <span>Explore My Journey</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Card 2: Explore with Aman -->
+          <div class="portal-card" onclick="switchView('explore')" style="cursor: pointer;">
+            <div>
+              <div class="portal-header">
+                <div class="portal-icon-box">⚡</div>
+                <div>
+                  <h2 class="portal-title">Explore with Aman</h2>
+                  <div style="font-size: 0.82rem; color: var(--text-accent); font-weight: 600;">Projects, Internships & Tech Simulations</div>
+                </div>
+              </div>
+              <p class="portal-desc" style="margin-top: 1rem;">
+                Dive into real-world corporate audits at Times of India, experiment with an interactive live Blockchain 
+                simulator with tamper tests, and discover fintech architectures from Adyen to unsecured lending prototypes.
+              </p>
+              <div class="portal-submodules-preview">
+                <span class="submodule-chip">Times of India Audit</span>
+                <span class="submodule-chip">Blockchain Simulator</span>
+                <span class="submodule-chip">N8N Automations</span>
+                <span class="submodule-chip">Adyen Fintech Deep-Dive</span>
+                <span class="submodule-chip">Retail Lending Journey</span>
+              </div>
+            </div>
+            <button class="portal-cta-btn">
+              <span>Launch Projects & Simulations</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Social Bar Below: GitHub, LinkedIn, Contact Me -->
+        <div class="bottom-social-dock">
+          <div class="social-links-bar">
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-dock-btn" id="githubLink">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in" target="_blank" rel="noopener noreferrer" class="social-dock-btn" id="linkedinLink">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- Contact Me -->
+            <button class="social-dock-btn btn-contact" onclick="openContactModal()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Contact Me</span>
+            </button>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-muted);">Designed with bluish frosted elegance · Built for Aman Prasad Laheri</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 2: "MY JOURNEY" (Scroll View + Sticky Right-Side List View) -->
+    <section id="view-journey" class="view-section">
+      <div class="module-page-container">
+        
+        <!-- Main Scroll Stream of Sub-modules -->
+        <div class="module-main-stream">
+          
+          <div class="module-page-header">
+            <div class="module-page-title-group">
+              <h1>My Journey</h1>
+              <p>The chapters, convictions, and experiences that forge my path in strategic finance & leadership.</p>
+            </div>
+            <div class="stream-controls">
+              <button class="btn-back-home" onclick="switchView('home')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span>Back to Home</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sub-module i: Who am I? -->
+          <article id="who-am-i" class="submodule-section">
+            <div class="section-badge">Sub-Module 01</div>
+            <h2 class="section-title">Who am I?</h2>
+
+            <div class="grid-3" style="margin-top: 1.5rem;">
+              <div class="detail-card">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  About Me
+                </h3>
+                <p>
+                  A detail-oriented finance strategist pursuing my PGDM at Great Lakes Institute of Management, Gurgaon. 
+                  My background spans corporate risk evaluation, internal audit, valuation modeling, and fintech system exploration.
+                </p>
+              </div>
+
+              <div class="detail-card">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-amber);"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  What Drives Me
+                </h3>
+                <p>
+                  Deciphering what numbers whisper behind balance sheets. Turning ambiguity into structured valuation, 
+                  uncovering revenue leakages in media conglomerates, and exploring how blockchain brings cryptographic trust to corporate balance sheets.
+                </p>
+              </div>
+
+              <div class="detail-card">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-emerald);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  Life Motto
+                </h3>
+                <p style="font-style: italic; font-weight: 600; color: var(--text-primary);">
+                  "Discipline at the crease, analytical rigour in the models, and grounded integrity in every decision."
+                </p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                  Whether pacing a run chase in a championship cricket final or auditing 50+ commercial transactions, calmness wins the day.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module ii: What I did? -->
+          <article id="what-i-did" class="submodule-section">
+            <div class="section-badge">Sub-Module 02</div>
+            <h2 class="section-title">What I did?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Education timeline, high-leverage learnings from setbacks, community service, and student leadership under fire.
+            </p>
+
+            <!-- Education Timeline -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle); margin-bottom: 2rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                Academic Qualifications
+              </h3>
+              
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">2025 – 2027 (Pursuing)</div>
+                  <div class="timeline-title">Post Graduate Diploma in Management (PGDM)</div>
+                  <div class="timeline-institution">Great Lakes Institute of Management, Gurgaon</div>
+                  <div class="timeline-score">CGPA: 2.97 / 4.00 · Focus: Corporate Finance & Analytics</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">2020 – 2023</div>
+                  <div class="timeline-title">Bachelor of Business Administration (B.B.A)</div>
+                  <div class="timeline-institution">Gossner College, Ranchi University, Jharkhand</div>
+                  <div class="timeline-score">Score: 8.6 / 10 · Graduated with Distinction</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">2020</div>
+                  <div class="timeline-title">Senior Secondary Education (Class XII - Commerce)</div>
+                  <div class="timeline-institution">D.A.V. Public School Hehal, Ranchi</div>
+                  <div class="timeline-score">Score: 8.3 / 10 (CBSE)</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">2018</div>
+                  <div class="timeline-title">Secondary School Certificate (Class X)</div>
+                  <div class="timeline-institution">D.A.V. Public School Hehal, Ranchi</div>
+                  <div class="timeline-score">Score: 8.5 / 10 (CBSE)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mistakes Learnings, Karma Yoga, Placecom Effect -->
+            <div class="grid-3">
+              <div class="detail-card">
+                <h3 style="color: var(--accent-amber);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                  Mistakes & Learnings
+                </h3>
+                <p>
+                  Early on, I relied heavily on textbook DCF assumptions without validating operational ground realities. 
+                  My internship taught me that numbers are only as good as the underlying contract terms and credit ageing. 
+                  Now, stress-testing sensitivity and edge-case assumptions is second nature.
+                </p>
+              </div>
+
+              <div class="detail-card">
+                <h3 style="color: var(--accent-emerald);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                  Karma Yoga
+                </h3>
+                <p>
+                  Service beyond oneself. As an active member of the <strong>Rotaract Club Ranchi (2023–2024)</strong> and 
+                  <strong>Harmony Club at GLIM Gurgaon (2025–2027)</strong>, plus event management for <strong>CREST 2025</strong>, 
+                  I believe sustainable leadership begins with empathy and uplifting communities without expecting returns.
+                </p>
+              </div>
+
+              <div class="detail-card">
+                <h3 style="color: var(--accent-cyan);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  Placecom Effect
+                </h3>
+                <p>
+                  The high-octane pressure cooker of campus placement drives and corporate relations. Managing corporate 
+                  stakeholders, midnight peer counseling, solving interview scheduling logjams, and learning that composure under 
+                  fire is the ultimate competitive advantage in business schools.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module iii: What I achieved? -->
+          <article id="what-i-achieved" class="submodule-section">
+            <div class="section-badge">Sub-Module 03</div>
+            <h2 class="section-title">What I achieved?</h2>
+            
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">
+              Trophies, Medals & Competitive Honors
+            </h3>
+            <div class="grid-3" style="margin-bottom: 2rem;">
+              <div class="award-card">
+                <div class="award-medal-icon">🏆</div>
+                <div>
+                  <div class="award-title">Won Kurukshetra 2026</div>
+                  <div class="award-org">Great Lakes Institute of Management, Gurgaon</div>
+                  <div style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">Flagship Management & Strategy Conclave</div>
+                </div>
+              </div>
+
+              <div class="award-card">
+                <div class="award-medal-icon">🏏</div>
+                <div>
+                  <div class="award-title">Best Batsman Award</div>
+                  <div class="award-org">Cricket Tournament, GLIM Gurgaon, 2026</div>
+                  <div style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">Consistent Match-Winning Strike Rate</div>
+                </div>
+              </div>
+
+              <div class="award-card">
+                <div class="award-medal-icon">⭐</div>
+                <div>
+                  <div class="award-title">Player of the Tournament</div>
+                  <div class="award-org">Rotaract Club Championship, Ranchi, 2024</div>
+                  <div style="font-size: 0.8rem; color: var(--accent-cyan); margin-top: 0.25rem;">All-Round Leadership & Sportsmanship</div>
+                </div>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary);">
+              Industry Certifications
+            </h3>
+            <div class="grid-2" style="margin-bottom: 2rem;">
+              <div class="detail-card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(56, 189, 248, 0.12); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  D
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Data Analytics Job Simulation</div>
+                  <div style="font-size: 0.88rem; color: var(--text-secondary);">Deloitte | 2 Weeks Intensive | 2026</div>
+                </div>
+              </div>
+
+              <div class="detail-card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245, 158, 11, 0.12); color: var(--accent-amber); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  BI
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Power BI Professional</div>
+                  <div style="font-size: 0.88rem; color: var(--text-secondary);">KOED | 5 Weeks Advanced Analytics | 2025</div>
+                </div>
+              </div>
+
+              <div class="detail-card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59, 130, 246, 0.12); color: var(--accent-blue); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  MS
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Career Essentials in Data Analysis</div>
+                  <div style="font-size: 0.88rem; color: var(--text-secondary);">Microsoft & LinkedIn Learning | 4 Weeks | 2025</div>
+                </div>
+              </div>
+
+              <div class="detail-card" style="display: flex; gap: 1rem; align-items: center;">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.12); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  UD
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Product Marketing Launch Plan</div>
+                  <div style="font-size: 0.88rem; color: var(--text-secondary);">UDEMY | 5 Weeks | 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">
+              Core Competency Matrix
+            </h3>
+            <div class="skills-badge-container">
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+                <span>Project Management</span>
+              </div>
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-rose);"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                <span>Risk Analysis</span>
+              </div>
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-emerald);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Investment Research</span>
+              </div>
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-amber);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+                <span>Problem Solving</span>
+              </div>
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-blue);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                <span>Time Management</span>
+              </div>
+              <div class="skill-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                <span>Financial Modelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module iv: Spices of my life -->
+          <article id="spices-of-life" class="submodule-section">
+            <div class="section-badge">Sub-Module 04</div>
+            <h2 class="section-title">Spices of my life</h2>
+            
+            <div class="grid-2" style="margin-top: 1.25rem;">
+              <div class="detail-card">
+                <h3>
+                  <span style="font-size: 1.4rem;">🏏</span>
+                  The 22 Yards: Cricket, Courage & Focus
+                </h3>
+                <p>
+                  Being awarded <strong>Best Batsman at GLIM Gurgaon 2026</strong> and <strong>Player of the Tournament (Rotaract '24)</strong> 
+                  is not just about hitting boundaries. Cricket is my greatest classroom in real-time probabilistic thinking: 
+                  evaluating field placements, building partnerships under scoreboard pressure, and knowing exactly when to play defensive and when to launch into the stands.
+                </p>
+              </div>
+
+              <div class="detail-card">
+                <h3>
+                  <span style="font-size: 1.4rem;">☕</span>
+                  Campus Charcha, Tea & Spontaneous Debates
+                </h3>
+                <p>
+                  From Ranchi's quiet charm to the rapid corporate corridors of Gurgaon, what gives life its flavor are 
+                  the late-night hostel terrace debates — breaking down Union Budget speeches, debating fintech valuations, 
+                  and celebrating small victories over steaming cups of chai with lifelong friends.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module v: Fun Philosophy -->
+          <article id="fun-philosophy" class="submodule-section">
+            <div class="section-badge">Sub-Module 05</div>
+            <h2 class="section-title">Fun Philosophy</h2>
+
+            <div class="grid-3" style="margin-top: 1.25rem;">
+              <div class="detail-card" style="border-left: 3px solid var(--accent-cyan);">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
+                  1. The FCFF Rule of Life
+                </h4>
+                <p style="font-size: 0.9rem;">
+                  "Life is fundamentally like Free Cash Flow to Firm: manage your working capital (daily energy), 
+                  reinvest in Capex (new skills), and let your terminal value take care of itself."
+                </p>
+              </div>
+
+              <div class="detail-card" style="border-left: 3px solid var(--accent-amber);">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
+                  2. The Yorker Principle
+                </h4>
+                <p style="font-size: 0.9rem;">
+                  "Life will bowl toe-crushing yorkers when you least expect them. You don't try to hook a yorker; 
+                  you get your bat down, dig it out with grace, and rotate the strike."
+                </p>
+              </div>
+
+              <div class="detail-card" style="border-left: 3px solid var(--accent-emerald);">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
+                  3. Diversify the Fun
+                </h4>
+                <p style="font-size: 0.9rem;">
+                  "Never put 100% of your happiness into a single portfolio asset. Spread your alpha across cricket, 
+                  finance spreadsheets, great friendships, and hearty food."
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module vi: अब्बा नहीं मानेंगे -->
+          <article id="abba-nahi-maanenge" class="submodule-section">
+            <div class="section-badge">Sub-Module 06</div>
+            <div class="abba-card">
+              <div class="hindi-title">अब्बा नहीं मानेंगे! 🎬</div>
+              <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.05rem;">
+                Every ambitious Indian middle-class dream starts with this iconic line from <em>3 Idiots</em>. 
+                When everyone expects the standard conventional path, convincing your parents that your calling is 
+                high-stakes corporate finance, fintech prototypes, and business school takes genuine grit, humor, and results!
+              </p>
+
+              <!-- Interactive Abba Persuasion Meter -->
+              <div class="persuasion-meter-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                  <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);">
+                    Interactive "Convince Abba" Simulator:
+                  </span>
+                  <span id="abbaMeterText" style="font-size: 0.85rem; font-weight: 700; color: var(--accent-amber);">
+                    Persuasion: 95% (Almost convinced!)
+                  </span>
+                </div>
+
+                <div class="meter-progress-bar">
+                  <div class="meter-fill" id="abbaMeterFill"></div>
+                </div>
+
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem;">
+                  <button class="hero-control-pill" onclick="testPersuasion('safe')" style="background: var(--bg-surface); color: var(--text-primary);">
+                    Option A: "Sharma ji ka beta civil services kar raha hai"
+                  </button>
+                  <button class="hero-control-pill" onclick="testPersuasion('fintech')" style="background: var(--bg-surface); color: var(--text-primary);">
+                    Option B: "Abba, I built a blockchain & retail lending app!"
+                  </button>
+                  <button class="hero-control-pill" onclick="testPersuasion('cricket_finance')" style="background: var(--accent-emerald); color: #fff;">
+                    Option C: "GLIM Kurukshetra Winner + Best Batsman + Times of India!"
+                  </button>
+                </div>
+
+                <div id="abbaResultBox" style="margin-top: 1.25rem; padding: 1rem; border-radius: 12px; background: rgba(0,0,0,0.25); border: 1px dashed var(--border-subtle);">
+                  <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent-emerald);">
+                    "Abba Bole: Beta, tumne GLIM Gurgaon me naam roshan kiya, ab jo tum chaho wahi karo!" 🎉
+                  </div>
+                  <p style="margin-top: 0.4rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    From Ranchi to Gurgaon, backing up conviction with tangible results is how every "Abba nahi maanenge" transforms into "Hume tum par naaz hai!"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sticky Right-Side List View Navigator -->
+        <aside class="right-sidebar-nav" id="sidebar-journey">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <span class="sidebar-title">Quick List View</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            </div>
+            
+            <ul class="sidebar-list">
+              <li>
+                <a href="#who-am-i" class="sidebar-item-link active">
+                  <span class="sidebar-num">01</span>
+                  <span>Who am I?</span>
+                </a>
+              </li>
+              <li>
+                <a href="#what-i-did" class="sidebar-item-link">
+                  <span class="sidebar-num">02</span>
+                  <span>What I did?</span>
+                </a>
+              </li>
+              <li>
+                <a href="#what-i-achieved" class="sidebar-item-link">
+                  <span class="sidebar-num">03</span>
+                  <span>What I achieved?</span>
+                </a>
+              </li>
+              <li>
+                <a href="#spices-of-life" class="sidebar-item-link">
+                  <span class="sidebar-num">04</span>
+                  <span>Spices of my life</span>
+                </a>
+              </li>
+              <li>
+                <a href="#fun-philosophy" class="sidebar-item-link">
+                  <span class="sidebar-num">05</span>
+                  <span>Fun Philosophy</span>
+                </a>
+              </li>
+              <li>
+                <a href="#abba-nahi-maanenge" class="sidebar-item-link">
+                  <span class="sidebar-num">06</span>
+                  <span>अब्बा नहीं मानेंगे</span>
+                </a>
+              </li>
+            </ul>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+              Click any module to jump instantly
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- VIEW 3: "EXPLORE WITH AMAN" (Scroll View + Sticky Right-Side List View) -->
+    <section id="view-explore" class="view-section">
+      <div class="module-page-container">
+        
+        <!-- Main Scroll Stream of Sub-modules -->
+        <div class="module-main-stream">
+          
+          <div class="module-page-header">
+            <div class="module-page-title-group">
+              <h1>Explore with Aman</h1>
+              <p>Corporate internships, cryptographic blockchain simulation, and hands-on fintech prototypes.</p>
+            </div>
+            <div class="stream-controls">
+              <button class="btn-back-home" onclick="switchView('home')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span>Back to Home</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sub-module i: Internship -->
+          <article id="internships" class="submodule-section">
+            <div class="section-badge">Sub-Module 01</div>
+            <h2 class="section-title">Internships & Professional Impact</h2>
+
+            <!-- Times of India -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle); margin-bottom: 1.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+                <div>
+                  <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary);">Finance Intern</h3>
+                  <div style="font-size: 1.05rem; font-weight: 600; color: var(--text-accent);">The Times of India (Bennett, Coleman & Co. Ltd.)</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+                    Management Assurance Services (MAS) · Mentored by CA Ajay Gupta, CA Udham Singh Tomar, CA Aditi Garg
+                  </div>
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 9999px; background: var(--chip-bg); color: var(--text-accent); border: 1px solid var(--chip-border);">
+                  Apr 2026 – Jun 2026
+                </div>
+              </div>
+
+              <div class="grid-3" style="margin-top: 1.5rem;">
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--accent-cyan); font-size: 1.05rem; margin-bottom: 0.35rem;">
+                    20 High-Value Receivables
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Reviewed 20 high-value receivable cases, analyzing ageing, recovery efforts, supporting documents, and management approvals 
+                    to assess write-off justifications and internal control compliance.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--accent-emerald); font-size: 1.05rem; margin-bottom: 0.35rem;">
+                    50+ IQ-QRN Transactions
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Analyzed 50+ IQ-QRN transactions using analytical skills, identifying rate mismatches and strengthening advertisement revenue controls 
+                    against corporate rate-card agreements.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--accent-amber); font-size: 1.05rem; margin-bottom: 0.35rem;">
+                    Agency Incentives & Tax
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Analyzed agency incentives using analytical skills, identifying alternative tax treatments and supporting informed, 
+                    risk-mitigated business decisions for media accounts.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Maruti Suzuki -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+                <div>
+                  <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary);">Sales & Promotions</h3>
+                  <div style="font-size: 1.05rem; font-weight: 600; color: var(--text-accent);">Maruti Suzuki</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Automotive Retail Operations & Customer Lifecycle</div>
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 9999px; background: var(--chip-bg); color: var(--text-accent); border: 1px solid var(--chip-border);">
+                  Jan 2023 – Feb 2023
+                </div>
+              </div>
+
+              <div class="grid-3" style="margin-top: 1.25rem;">
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    50+ Vehicle Transactions
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Maintained documentation for 50+ vehicle transactions with Attention to Detail, ensuring accurate and smooth transaction processing.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    Customer Inquiry Resolution
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Supported customer inquiry handling through Problem Solving, helping the sales team address event-generated customer requirements effectively.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    Analytical Customer Targeting
+                  </div>
+                  <p style="font-size: 0.88rem;">
+                    Used customer data to develop targeted approaches, demonstrating Analytical Skills and supporting more effective customer engagement initiatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module ii: Blockchain Simulation -->
+          <article id="blockchain-sim" class="submodule-section">
+            <div class="section-badge">Sub-Module 02</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+              <h2 class="section-title" style="margin-bottom: 0;">Interactive Blockchain Simulation</h2>
+              <div style="font-size: 0.85rem; color: var(--text-accent); font-weight: 700; background: var(--chip-bg); padding: 0.35rem 0.8rem; border-radius: 9999px;">
+                Live SHA-256 Web Crypto
+              </div>
+            </div>
+            
+            <p style="color: var(--text-secondary); margin-top: 0.75rem;">
+              Directly inspired by my 2026 Academic Project: <em>"Built a blockchain application and enabled transaction integrity through hash-linked, tamper-detectable ledgers"</em>.
+              Below is a live cryptographic blockchain simulator running directly in your browser. 
+              <strong>Try editing the transaction data in Block #1 to witness how downstream cryptographic hashes immediately turn red and invalidate the chain!</strong>
+            </p>
+
+            <div class="blockchain-sandbox">
+              <div class="chain-toolbar">
+                <div class="chain-status-indicator" id="chainStatusIndicator">
+                  <span class="status-dot"></span>
+                  <span>Verifying Ledger Cryptographic State...</span>
+                </div>
+
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                  <button class="hero-control-pill" onclick="triggerAddBlock()" style="background: var(--gradient-blue); color: #fff;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Add Custom Block
+                  </button>
+                  <button class="hero-control-pill" onclick="triggerResetChain()" style="background: var(--bg-surface); color: var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"/></svg>
+                    Reset Demo Chain
+                  </button>
+                </div>
+              </div>
+
+              <!-- Horizontally scrollable row of interactive blocks -->
+              <div class="chain-blocks-row" id="chainBlocksContainer">
+                <!-- Dynamically populated by js/blockchain.js -->
+              </div>
+            </div>
+          </article>
+
+          <!-- Sub-module iii: Learn with me -->
+          <article id="learn-with-me" class="submodule-section">
+            <div class="section-badge">Sub-Module 03</div>
+            <h2 class="section-title">Learn with me</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Technical deep dives into workflow automations, Adyen's unified payment gateway, unsecured digital lending, and Infosys FCFF valuation.
+            </p>
+
+            <!-- 1. N8N Automations -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle); margin-bottom: 1.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  N8N
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">
+                  N8N Financial Automations & Webhook Pipelines
+                </h3>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                Automating repetitive finance workflows without writing heavy custom servers:
+              </p>
+
+              <div class="grid-3">
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    1. Ingestion & Webhooks
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Listening for incoming invoice payloads from ERP/accounting software or payment gateways with instant schema validation.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    2. Data Enrichment & Tax
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Executing JavaScript nodes to verify GST/TDS rates, check rate cards against vendor contracts, and flag discrepancies.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    3. Auto-Alert & Sync
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Pushing reconciliations straight to Google Sheets / Postgres and triggering instant Slack / Email alerts for high-value variances.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Learn Fintech - Adyen -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle); margin-bottom: 1.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  AD
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">
+                  Learn Fintech – Adyen's Unified Commerce Architecture
+                </h3>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                Why Adyen conquered global payments: replacing 4 legacy intermediaries with a single platform:
+              </p>
+
+              <div class="grid-2">
+                <div class="detail-card">
+                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-accent); margin-bottom: 0.35rem;">
+                    Single Gateway vs Legacy Fragmentation
+                  </h4>
+                  <p style="font-size: 0.88rem;">
+                    Traditional setups string together a gateway, risk manager, and merchant acquirer across multiple vendors. 
+                    Adyen collapsed this entire stack into a single unified API, minimizing transaction latency and boosting authorization rates.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-accent); margin-bottom: 0.35rem;">
+                    Interchange++ Transparent Pricing
+                  </h4>
+                  <p style="font-size: 0.88rem;">
+                    Instead of opaque blended fee structures, Interchange++ passes true card scheme fees (Visa/Mastercard) and issuing bank interchange 
+                    directly with a transparent fixed Adyen markup, saving enterprise merchants millions in overhead.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. A Lending App Journey -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle); margin-bottom: 1.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(59, 130, 246, 0.15); color: var(--accent-blue); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  LP
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">
+                  A Lending App Journey (Unsecured Retail Prototype)
+                </h3>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                Based on my academic project: <em>"Studied fintech business models and scalability, developed an unsecured retail lending prototype covering digital onboarding, KYC, credit assessment and loan disbursement"</em>:
+              </p>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Stage 1</div>
+                  <div class="timeline-title">Frictionless Digital Onboarding & e-KYC</div>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                    Aadhaar XML & PAN API verification in under 45 seconds, paired with passive liveness detection to eliminate identity fraud.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Stage 2</div>
+                  <div class="timeline-title">Alternative Credit Underwriting Engine</div>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                    Parsing bank statements via Account Aggregator frameworks + calculating debt-to-income and cashflow volatility beyond rigid CIBIL thresholds.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Stage 3</div>
+                  <div class="timeline-title">Automated Risk Scoring & Loan Sanction</div>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                    Instant credit line recommendation, personalized risk-adjusted APR calculation, and e-mandate (eNACH) auto-debit registration.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-year">Stage 4</div>
+                  <div class="timeline-title">Instant Disbursal & Real-Time Monitoring</div>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                    Immediate IMPS / UPI disbursal to borrower account, linked with early-warning delinquency triggers and automated repayment reminders.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Infosys Financial Statement Analysis -->
+            <div style="background: var(--bg-card-solid); border-radius: 18px; padding: 1.75rem; border: 1px solid var(--border-subtle);">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                  INF
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">
+                  Infosys Financial Statement Analysis & FCFF Valuation (2026)
+                </h3>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                Comprehensive corporate finance assessment conducted as an academic project:
+              </p>
+
+              <div class="grid-3">
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-accent); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    FCFF Valuation
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Applied Free Cash Flow to Firm (FCFF) discounted cash-flow valuation, estimating intrinsic enterprise value across varying perpetual growth scenarios.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-accent); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    Ratio & Cash-Flow Health
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Analyzed profitability, liquidity, solvency, common-size and trend metrics to assess Infosys long-term value creation.
+                  </p>
+                </div>
+
+                <div class="detail-card">
+                  <div style="font-weight: 700; color: var(--text-accent); font-size: 0.95rem; margin-bottom: 0.3rem;">
+                    Peer Benchmarking
+                  </div>
+                  <p style="font-size: 0.85rem;">
+                    Benchmarked against tier-1 IT services giants (TCS, Wipro, HCLTech) to gauge operational efficiency, margins, and shareholder return metrics.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- Sticky Right-Side List View Navigator -->
+        <aside class="right-sidebar-nav" id="sidebar-explore">
+          <div class="sidebar-card">
+            <div class="sidebar-header">
+              <span class="sidebar-title">Quick List View</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            </div>
+            
+            <ul class="sidebar-list">
+              <li>
+                <a href="#internships" class="sidebar-item-link active">
+                  <span class="sidebar-num">01</span>
+                  <span>Internships</span>
+                </a>
+              </li>
+              <li>
+                <a href="#blockchain-sim" class="sidebar-item-link">
+                  <span class="sidebar-num">02</span>
+                  <span>Blockchain Simulation</span>
+                </a>
+              </li>
+              <li>
+                <a href="#learn-with-me" class="sidebar-item-link">
+                  <span class="sidebar-num">03</span>
+                  <span>Learn with me</span>
+                </a>
+              </li>
+            </ul>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+              Click any module to jump instantly
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal-backdrop" id="contactModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeContactModal()" aria-label="Close dialog">&times;</button>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);">Let's Connect</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.25rem;">
+          Reach out for corporate finance, internal audit & valuation advisory, or recruitment conversations.
+        </p>
+      </div>
+
+      <!-- Quick Contact Info Cards -->
+      <div class="grid-2" style="margin-bottom: 1.5rem;">
+        <div class="detail-card" style="cursor: pointer;" onclick="copyEmail('aman.laheri@greatlakes.edu.in')">
+          <div style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--accent-cyan);">Email (Click to copy)</div>
+          <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-top: 0.2rem; word-break: break-all;">
+            aman.laheri@greatlakes.edu.in
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--accent-emerald);">Current Campus</div>
+          <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-top: 0.2rem;">
+            GLIM Gurgaon / Ranchi, India
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Message Form -->
+      <form id="contactForm">
+        <div class="form-group">
+          <label class="form-label" for="contactName">Your Name</label>
+          <input type="text" id="contactName" class="form-input" placeholder="e.g. CA Ajay Gupta / Recruiter" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" class="form-input" placeholder="name@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contactMsg">Message / Inquiry</label>
+          <textarea id="contactMsg" class="form-textarea" rows="3" placeholder="Hi Aman, let's discuss an opportunity..." required></textarea>
+        </div>
+
+        <button type="submit" class="portal-cta-btn" style="width: 100%; justify-content: center; gap: 0.5rem;">
+          <span>Send Message</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notice" id="toastNotice"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/blockchain.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
