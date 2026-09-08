@@ -74,23 +74,33 @@
             <input type="file" id="photoInput" accept="image/*" style="display: none;">
           </div>
 
-          <!-- Hero Content Layer -->
-          <div class="hero-content">
-            <div class="hero-badge">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); display: inline-block;"></span>
-              Great Lakes Institute of Management, Gurgaon · PGDM '27
+          <!-- Hero Main Flex Layout: Left Text Card + Right Uncropped Portrait Card -->
+          <div class="hero-main-layout">
+            
+            <!-- Hero Content Text Card -->
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); display: inline-block;"></span>
+                Great Lakes Institute of Management, Gurgaon · PGDM '27
+              </div>
+
+              <!-- "Hello" in Italics as explicitly requested -->
+              <div class="hero-hello-italic">Hello</div>
+
+              <h1 class="hero-name">I'm Aman Prasad Laheri</h1>
+
+              <p class="hero-tagline">
+                Detail-oriented finance professional with hands-on experience in internal audit, 
+                business process evaluation, financial analysis, and risk assessment. Proven ability 
+                to analyze complex transaction datasets and deliver meaningful business insights.
+              </p>
             </div>
 
-            <!-- "Hello" in Italics as explicitly requested -->
-            <div class="hero-hello-italic">Hello</div>
+            <!-- Dedicated Uncropped Portrait Card (Head-to-Chest Full View) -->
+            <div class="hero-portrait-card">
+              <img src="Aman_home.jpg" alt="Aman Prasad Laheri" class="hero-portrait-img" id="heroPortraitImg" onerror="this.src='assets/Aman_home.jpg';">
+            </div>
 
-            <h1 class="hero-name">I'm Aman Prasad Laheri</h1>
-
-            <p class="hero-tagline">
-              Detail-oriented finance professional with hands-on experience in internal audit, 
-              business process evaluation, financial analysis, and risk assessment. Proven ability 
-              to analyze complex transaction datasets and deliver meaningful business insights.
-            </p>
           </div>
         </div>
 
