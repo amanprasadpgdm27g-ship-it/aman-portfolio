@@ -310,16 +310,16 @@ main.app-viewport {
   background: var(--bg-surface);
 }
 
-/* Blurred Background Photo - Focal point shifted right & top to show face clearly */
+/* Background Photo - Aligned center top to show head, face, and chest fully */
 .hero-backdrop-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 70% 15%;
+  object-position: center 0%;
   filter: blur(14px);
-  transform: scale(1.08);
+  transform: scale(1.04);
   transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1;
 }
@@ -327,7 +327,7 @@ main.app-viewport {
 /* When de-blur is toggled */
 .hero-16-9-frame.deblurred .hero-backdrop-img {
   filter: blur(0px);
-  transform: scale(1.01);
+  transform: scale(1.0);
 }
 
 .hero-overlay-tint {
@@ -1323,7 +1323,7 @@ main.app-viewport {
     align-items: flex-end;
   }
   .hero-backdrop-img {
-    object-position: 65% 10%;
+    object-position: center 0%;
   }
   .hero-content {
     max-width: 100%;
