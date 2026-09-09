@@ -115,11 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 3. Hero Backdrop Photo & Blur Controls ---
-  const heroPortraitImg = document.getElementById('heroPortraitImg');
   const savedPhoto = localStorage.getItem('aman_custom_photo');
-  if (savedPhoto) {
-    if (heroImg) heroImg.src = savedPhoto;
-    if (heroPortraitImg) heroPortraitImg.src = savedPhoto;
+  if (savedPhoto && heroImg) {
+    heroImg.src = savedPhoto;
   }
 
   if (toggleBlurBtn && heroFrame) {
@@ -144,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.onload = function(evt) {
           const result = evt.target.result;
           if (heroImg) heroImg.src = result;
-          if (heroPortraitImg) heroPortraitImg.src = result;
           try {
             localStorage.setItem('aman_custom_photo', result);
             showToast('Hero photo updated successfully!');
