@@ -344,23 +344,17 @@ main.app-viewport {
   opacity: 0.65;
 }
 
-/* Hero Content Layer - Centered Frosted Glass Card */
+/* Hero Content Layer - Direct overlay without card box */
 .hero-content {
   position: relative;
   z-index: 3;
   text-align: center;
-  max-width: 780px;
-  padding: 2.25rem 2.5rem;
+  max-width: 820px;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;
-  background: var(--bg-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border-subtle);
-  border-radius: 24px;
-  box-shadow: var(--shadow-card);
+  gap: 1.25rem;
 }
 
 /* "Hello" in Italics */
@@ -368,7 +362,7 @@ main.app-viewport {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(2.75rem, 6vw, 4.25rem);
+  font-size: clamp(3.75rem, 9vw, 6.5rem);
   line-height: 1;
   letter-spacing: -0.02em;
   background: var(--gradient-blue);
@@ -387,9 +381,9 @@ main.app-viewport {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 1rem;
   border-radius: 9999px;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
   background: var(--chip-bg);
   border: 1px solid var(--chip-border);
@@ -397,18 +391,18 @@ main.app-viewport {
 }
 
 .hero-name {
-  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin-top: 0;
+  margin-top: -0.5rem;
 }
 
 .hero-tagline {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 500px;
-  line-height: 1.6;
+  max-width: 680px;
+  line-height: 1.65;
 }
 
 /* Hero Controls (Blur toggle & Photo swap) */
