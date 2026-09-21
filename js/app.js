@@ -137,6 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.onload = function(evt) {
           const result = evt.target.result;
           if (heroImg) heroImg.src = result;
+          const heroPortraitImg = document.getElementById('heroPortraitImg');
+          if (heroPortraitImg) heroPortraitImg.src = result;
           showToast('Temporary preview updated!');
         };
         reader.readAsDataURL(file);
