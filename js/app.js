@@ -115,11 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 3. Hero Backdrop Photo & Blur Controls ---
-  const savedPhoto = localStorage.getItem('aman_custom_photo');
-  if (savedPhoto && heroImg) {
-    heroImg.src = savedPhoto;
-  }
-
   if (toggleBlurBtn && heroFrame) {
     toggleBlurBtn.addEventListener('click', () => {
       heroFrame.classList.toggle('deblurred');
@@ -142,12 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.onload = function(evt) {
           const result = evt.target.result;
           if (heroImg) heroImg.src = result;
-          try {
-            localStorage.setItem('aman_custom_photo', result);
-            showToast('Hero photo updated successfully!');
-          } catch(err) {
-            showToast('Photo updated (File is too large for permanent localStorage storage)');
-          }
+          showToast('Temporary preview updated!');
         };
         reader.readAsDataURL(file);
       }
