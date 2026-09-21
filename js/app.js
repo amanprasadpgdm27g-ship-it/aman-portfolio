@@ -125,25 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (changePhotoBtn && photoInput) {
-    changePhotoBtn.addEventListener('click', () => {
-      photoInput.click();
-    });
-
-    photoInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(evt) {
-          const result = evt.target.result;
-          if (heroImg) heroImg.src = result;
-          showToast('Temporary preview updated!');
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  }
-
   // --- 4. Right-Side Sticky ScrollSpy for Submodules ---
   let observer = null;
   function initScrollSpy(sectionPrefix) {
